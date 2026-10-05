@@ -15,6 +15,12 @@
       "dev.cd.shpricefix.ShPriceFix"
     ]
   },
+  "mixins": [
+    "shpricefix.mixins.json"
+  ],
+  "suggests": {
+    "skyhanni": "*"
+  },
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-api": ">=${fabric_api_version}",

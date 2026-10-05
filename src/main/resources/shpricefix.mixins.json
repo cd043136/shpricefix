@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "dev.cd.shpricefix.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "plugin": "dev.cd.shpricefix.mixin.ShPriceFixMixinPlugin",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "client": [
+    "ItemPriceUtilsMixin"
+  ]
+}
