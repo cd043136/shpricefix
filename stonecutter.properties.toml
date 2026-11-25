@@ -1,0 +1,34 @@
+# Per-version properties, read with sc.properties in build.gradle.kts.
+# Root entries apply to every version unless a version section overrides them.
+mod.id = "shpricefix"
+mod.name = "SH Price Fix"
+mod.description = "Fixes SkyHanni profit tracker prices for rift vampire drops"
+mod.version = "1.0.0"
+
+deps.fabric_loader = "0.19.3"
+
+# deps.skyhanni is compile-only, for exact mixin handler types. Never shipped; no runtime dep.
+# It's a Modrinth version id, since SkyHanni reuses one version number for every Minecraft version.
+
+["26.1"]
+mod.mc_compat = "~26.1"
+
+deps.fabric_api = "0.151.0+26.1.2"
+# 9.1.0 for 26.1
+deps.skyhanni = "JuSRfyPe"
+
+["26.2"]
+mod.mc_compat = "~26.2"
+
+deps.fabric_api = "0.161.0+26.2"
+# 9.1.0 for 26.2
+deps.skyhanni = "xvOJIsMd"
+
+["26.3"]
+mod.mc_compat = "~26.3"
+
+deps.fabric_api = "0.165.0+26.3"
+# No 26.3 release yet: CI jar of https://github.com/SkyHanniStudios/SkyHanni/pull/6562 at 4ba67f9
+deps.skyhanni_jar = "SkyHanni-9.5.0-mc26.3-pr6562.jar"
+# Fallback without that jar: 9.1.0 for 26.2
+deps.skyhanni = "xvOJIsMd"

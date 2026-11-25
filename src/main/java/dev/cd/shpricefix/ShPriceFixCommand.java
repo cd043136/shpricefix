@@ -13,7 +13,10 @@ public final class ShPriceFixCommand {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, buildContext) -> dispatcher.register(
             ClientCommands.literal("pricefix").executes(ctx -> {
                 Minecraft client = ctx.getSource().getClient();
-                client.execute(() -> client.setScreen(new PriceFixScreen()));
+                //? if >=26.2 {
+                client.execute(() -> client.gui.setScreen(new PriceFixScreen()));
+                //?} else
+                //client.execute(() -> client.setScreen(new PriceFixScreen()));
                 return Command.SINGLE_SUCCESS;
             })
         ));
